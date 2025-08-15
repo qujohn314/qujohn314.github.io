@@ -23,7 +23,6 @@ import myArticles from "../data/articles";
 import "./styles/homepage.css";
 
 const Homepage = () => {
-	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
 
@@ -41,13 +40,9 @@ const Homepage = () => {
 				if (newLogoSize > 40) {
 					setLogoSize(newLogoSize);
 					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
-				} else {
-					setStayLogo(true);
 				}
 			} else {
 				setLogoSize(newLogoSize);
-				setStayLogo(false);
 			}
 		};
 
@@ -59,12 +54,12 @@ const Homepage = () => {
 
 	const logoStyle = {
 		display: "flex",
-		position: stayLogo ? "fixed" : "relative",
-		top: stayLogo ? "3vh" : "auto",
+		position: "relative",
+		top: "auto",
 		zIndex: 999,
-		border: stayLogo ? "1px solid white" : "none",
-		borderRadius: stayLogo ? "50%" : "none",
-		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
+		border: "none",
+		borderRadius: "none",
+		boxShadow: "none",
 	};
 
 	return (
