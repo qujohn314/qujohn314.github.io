@@ -1,5 +1,7 @@
 @import "/src/data/styles.css";
 
+html, body { height: 100%; margin: 0; }
+
 ::-webkit-scrollbar {
 	width: 10px;
 }
@@ -20,6 +22,10 @@
 .page-content {
 	background-color: white;
 	position: relative;
+	border: 1px solid #f4f4f5;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .page-content:before,
@@ -30,7 +36,6 @@
 	bottom: 0;
 	width: calc((100% - 1200px) / 2);
 	background-color: #fafafa;
-	border: 1px solid #f4f4f5;
 }
 
 .page-content:before {
@@ -46,12 +51,17 @@
 .content-wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex: 1;                     /* pushes footer down */
+	position: relative;
+	z-index: 1;                  /* above side gutters if you use them */
 }
 
 .title {
 	color: var(--primary-color);
-	font-family: var(--secondary-font);
-	font-size: 45px;
+	font-family: var(--primary-font);
+	font-size: 38px;
 	font-weight: 700;
 	width: 70%;
 }
@@ -59,14 +69,21 @@
 .subtitle {
 	padding-top: 10px;
 	color: var(--secondary-color);
-	font-size: 16px;
-	line-height: 28px;
+	font-family: var(--secondary-font);
+	font-size: 18px;
+	line-height: 30px;
 	width: 70%;
-	margin-top: 25px;
+	margin-top: 15px;
+}
+
+.page-body {
+  flex: 1;                     /* key line */
+  display: flex;
+  flex-direction: column;
 }
 
 .page-footer {
-	position: block;
+	position: relative;
 }
 
 .page-footer::before {

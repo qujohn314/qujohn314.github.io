@@ -4,21 +4,17 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
 	faGithub,
-	faStackOverflow,
-	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../components/common/logo";
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
 
@@ -52,16 +48,6 @@ const Homepage = () => {
 
 	const currentSEO = SEO.find((item) => item.page === "home");
 
-	const logoStyle = {
-		display: "flex",
-		position: "relative",
-		top: "auto",
-		zIndex: 999,
-		border: "none",
-		borderRadius: "none",
-		boxShadow: "none",
-	};
-
 	return (
 		<React.Fragment>
 			<Helmet>
@@ -74,106 +60,95 @@ const Homepage = () => {
 			</Helmet>
 
 			<div className="page-content">
-				<NavBar active="home" />
+				<NavBar/>
 				<div className="content-wrapper">
-					<div className="homepage-logo-container">
-						<div style={logoStyle}>
-							<Logo width={logoSize} link={false} />
-						</div>
-					</div>
-
-					<div className="homepage-container">
+					<div id="top" className="homepage-container">
 						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.title}
+							<div className="homepage-first-area-top">
+								<div className="homepage-first-area-left-side">
+									<div className="title homepage-title">
+										{INFO.homepage.title}
+									</div>
+
+									<div className="subtitle homepage-subtitle">
+										{INFO.homepage.description}
+									</div>
+
+
 								</div>
 
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-								</div>
-							</div>
+								<div className="homepage-first-area-right-side">
+									<div className="homepage-image-container">
+										<div className="homepage-image-wrapper">
+											<img
+												src="homepage.jpg"
+												alt="about"
+												className="homepage-image"
+											/>
+										</div>
+									</div>
 
-							<div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
+									<div className="homepage-socials">
+										<a
+											href={INFO.socials.github}
+											target="_blank"
+											rel="noreferrer"
+										>
+											<FontAwesomeIcon
+												icon={faGithub}
+												className="homepage-social-icon"
+											/>
+										</a>
+										<a
+											href={`mailto:${INFO.main.email}`}
+											target="_blank"
+											rel="noreferrer"
+										>
+											<FontAwesomeIcon
+												icon={faMailBulk}
+												className="homepage-social-icon"
+											/>
+										</a>
+										<a
+											href={INFO.socials.linkedin}
+											target="_blank"
+											rel="noreferrer"
+										>
+											<FontAwesomeIcon
+												icon={faLinkedinIn}
+												className="homepage-social-icon"
+											/>
+										</a>
 									</div>
 								</div>
 							</div>
-						</div>
+							<div className="homepage-experience">
+								<div className="title homepage-title">
+											{INFO.experience.title}
+										</div>
 
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
+										<div className="subtitle homepage-subtitle">
+											{INFO.experience.description}
+								</div>
+							</div>
 						</div>
+						
+						
 
-						<div className="homepage-projects">
+						<div id="projects" className="homepage-projects">
+							<div className="homepage-experience">
+								<div className="title homepage-title">
+									{"Projects"}
+								</div>
+							</div>
 							<AllProjects />
 						</div>
 
-						<div className="homepage-after-title">
-
-							<div className="homepage-works">
-								<Works />
-							</div>
-						</div>
-
-						<div className="page-footer">
-							<Footer />
-						</div>
+					</div>
+				</div>
+				<div className="page-footer">
+					<div className="footer-inner">
+						<Footer />
 					</div>
 				</div>
 			</div>

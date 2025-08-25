@@ -3,26 +3,34 @@
 .footer {
 	display: flex;
 	padding-top: 25px;
-	margin-top: 50px;
 	padding-bottom: 25px;
 	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row; 
+}
+
+.footer-inner {
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 .footer-links,
 .footer-credits {
-	flex-basis: 50%;
+	flex-basis: 100%;
 }
-
 .footer-links {
-	margin-left: -40px;
+	flex-basis: 0%;
 }
 
 .footer-nav-link-list {
 	display: flex;
 	list-style: none;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: center;
+	gap: 90px; 
+	margin-left: -30px;
 }
+
 
 .footer-nav-link-item {
 	font-weight: bold;

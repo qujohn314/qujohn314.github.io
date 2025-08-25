@@ -1,26 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import INFO from "../../data/user";
+const Logo = ({ width}) => {
+  const Title = <p>{`Quincy Johnson`}</p>;
 
-import "./styles/logo.css";
-
-const Logo = (props) => {
-	let { width, link } = props;
-
-	if (link === undefined) {
-		link = true;
-	}
-
-	const imageElement = (
-		<img src={INFO.main.logo} alt="logo" className="logo" width={width} />
-	);
-
-	return (
-		<React.Fragment>
-			{link ? <Link to="/">{imageElement}</Link> : imageElement}
-		</React.Fragment>
-	);
+  return (
+    <>
+      {Title}
+    </>
+  );
 };
 
 export default Logo;

@@ -1,8 +1,8 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Home | Quincy",
+		name: "Quincy Johnson",
+		email: "quincyjohnson314@gmail.com",
 	},
 
 	socials: {
@@ -11,67 +11,53 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "About Me",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"Hi, I’m Quincy. I’m a computer scientist and robotics enthusiast who loves building intelligent systems — from autonomous drones to task-planning algorithms. My work sits at the intersection of machine learning, robotics, and planning, but at the core, I enjoy designing algorithms, prototyping, and solving tough problems with others. When I’m not working, you’ll usually find me tinkering with new tech, playing and making video games, hiking, or searching for the best food spots.",
 	},
 
-	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+	experience: {
+		title: "Experience",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"Skydio \n MIT CSAIL, MIT Learning and Intelligent Systems Group \n Computer Science B.S. & M.Eng. @ MIT",
 	},
 
-	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-	},
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "Learning Diffusion Models to Enable Efficient Sampling for Task and Motion Planning",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Developed a diffusion model–based approach to improve task and motion planning in robotics. Instead of relying on hand-designed or exhaustive parameter sampling, the model learned efficient sampling strategies directly from demonstrations. This enabled robots to solve complex, multi-step tasks more efficiently and robustly, especially in scenarios with challenging or multimodal parameter spaces.",
+			logo: "RingStack.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://dspace.mit.edu/handle/1721.1/159141",
 		},
 
 		{
-			title: "Project 2",
+			title: "Precision Throwing Robot",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+				"We designed and implemented a robotic system where iiwa manipulators grasp and throw objects to target locations. The project integrated inverse dynamics control, geometric grasping, trajectory planning, and task-level coordination to extend the robots’ operational reach through throwing. Demonstrated accurate performance in controlled environments and analyzed key factors affecting precision and robustness.",
+			logo: "Capture.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/qujohn314/Throwing-Robots",
 		},
 
 		{
-			title: "Project 3",
+			title: "Mini-AV Challenges",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+				"We developed a suite of robotics algorithms across multiple challenges, including PID-based wall following with safety controls, vision-based parking using SIFT and color segmentation, localization with Monte Carlo and SLAM, and trajectory planning with pure pursuit and search-based methods. The final multi-stage challenge combined perception, planning, and machine learning to enable city-scale autonomous navigation.",
+			logo: "ConeDetect.jpg",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://rss2022-11.github.io/website/labs/",
 		},
 
 		{
-			title: "Project 4",
+			title: "Quadrotor Pole Balancer",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Explored and developed control strategies that enabled a quadrotor to balance an inverted pole. Implemented and compared approaches using a linear quadratic regulator (LQR) and model predictive control (MPC), focusing on stability and robustness under modeling errors.",
+			logo: "quadropole.png",
 			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/qujohn314/Quadropole",
 		},
 	],
 };

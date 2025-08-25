@@ -8,7 +8,8 @@
 	/* ---------------------- */
 
 	/* ------- fonts ------- */
-	--primary-font: "Heebo", sans-serif;
-	--secondary-font: "Roboto", sans-serif;
+	--primary-font: "IBM Plex Mono", monospace;
+	--secondary-font: "Source Code Pro", monospace;
+	--tertiary-font: "Roboto", monospace;
 	/* --------------------- */
 }

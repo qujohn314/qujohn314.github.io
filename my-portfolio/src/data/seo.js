@@ -2,36 +2,15 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
-
-	{
-		page: "about",
-		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
-
-	{
-		page: "articles",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
-
-	{
-		page: "projects",
-		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"I’m a computer scientist and robotics enthusiast who loves building intelligent systems — from autonomous drones to task-planning algorithms. My work sits at the intersection of machine learning, robotics, and planning, but at the core, I enjoy designing algorithms, prototyping, and solving tough problems with others. When I’m not working, you’ll usually find me tinkering with new tech, playing and making video games, hiking, or searching for the best food spots. I am experienced in Robotics and ML.",
+		keywords: ["Quincy", "Quincy Johnson", "Quincy Johnson MIT", "Quincy J"],
 	},
 
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"I’m open to collaboration, research partnerships, and general inquiries.",
+		keywords: ["Quincy", "Quincy Johnson", "Quincy Johnson MIT", "Quincy J"],
 	},
 ];
 

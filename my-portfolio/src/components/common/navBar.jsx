@@ -1,51 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
+import Logo from "./logo.jsx";
 import "./styles/navBar.css";
 
-const NavBar = (props) => {
-	const { active } = props;
+const NavBar = () => {
 
 	return (
 		<React.Fragment>
 			<div className="nav-container">
 				<nav className="navbar">
 					<div className="nav-background">
+
+						<div className="nav-name">
+							<div className="logo">
+								<Logo/>
+							</div>
+						</div>
+
 						<ul className="nav-list">
-							<li
-								className={
-									active === "home"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/">Home</Link>
+							<li className="nav-item">
+								<HashLink smooth to="/#top">Home</HashLink>
 							</li>
-							<li
-								className={
-									active === "about"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/about">About</Link>
+							<li className="nav-item">
+								<HashLink smooth to="/#projects">Projects</HashLink>
 							</li>
-							<li
-								className={
-									active === "projects"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
-								<Link to="/projects">Projects</Link>
-							</li>
-							<li
-								className={
-									active === "contact"
-										? "nav-item active"
-										: "nav-item"
-								}
-							>
+							<li className="nav-item">
 								<Link to="/contact">Contact</Link>
 							</li>
 						</ul>
