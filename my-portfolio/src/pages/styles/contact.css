@@ -13,6 +13,10 @@
 	top: 4vh;
 }
 
+.contact-subtitle a {
+	color:var(--link-color);
+}
+
 .contact-subtitle {
 	width: 100% !important;
 }

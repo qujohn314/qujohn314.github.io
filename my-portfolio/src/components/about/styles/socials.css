@@ -12,7 +12,7 @@
 
 .social-icon {
 	font-size: 15px;
-	color: var(--secondary-color);
+	color: var(--quaternary-color);
 }
 
 .social-text {
@@ -21,6 +21,11 @@
 	margin-top: -20px;
 	font-weight: 600;
 	font-size: 14px;
+}
+
+.social-text:hover{
+	color:var(--primary-color);
+	transition: color 0.3s ease-in-out;
 }
 
 .email::before {

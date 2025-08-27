@@ -35,7 +35,7 @@ html, body { height: 100%; margin: 0; }
 	top: 0;
 	bottom: 0;
 	width: calc((100% - 1200px) / 2);
-	background-color: #fafafa;
+	background-color: #f8f6f6;
 }
 
 .page-content:before {

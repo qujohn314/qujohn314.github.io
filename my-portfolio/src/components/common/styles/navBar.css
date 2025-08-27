@@ -5,7 +5,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--primary-color);
+	color: var(--quaternary-color);
 	font-family: var(--tertiary-font);
 }
 
@@ -61,7 +61,7 @@
 
 .nav-item a {
 	text-decoration: none;
-	color: var(--primary-color);
+	color: var(--quaternary-color);
 }
 
 .nav-item a:hover {

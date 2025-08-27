@@ -16,7 +16,7 @@
 }
 
 .project:hover {
-	background: #fafafa;
+	background: #f0f0f0;
 	opacity: 1;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -45,15 +45,21 @@
 
 .project-title {
 	font-family: var(--secondary-font);
-	color: var(--primary-color);
+	color: var(--quaternary-color);
 	font-size: 16px;
 	padding-top: 15px;
 	margin-bottom: 1em;
 	font-weight: 700;
 }
 
+.project:hover .project-title{
+	color: var(--primary-color);
+	transition: color 0.3s ease-in-out;
+}
+
 .project-description {
 	color: var(--secondary-color);
+	white-space: pre-line;
 }
 
 .project-link {

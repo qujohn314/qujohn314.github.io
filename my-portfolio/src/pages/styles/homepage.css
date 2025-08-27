@@ -31,6 +31,7 @@
   width: 100%;
   max-width: none;
   min-width: 0;            /* important so text can shrink in grid */
+  white-space: pre-line;
 }
 
 /* Right side: center image/socials; allow shrink */
@@ -98,7 +99,7 @@
 /* Experience block spacing */
 .homepage-experience {
   width: 60%;
-  margin-top: -130px;
+  margin-top: -100px;
   white-space: pre-line;
 }
 
@@ -113,7 +114,7 @@
 /* Projects spacing */
 .homepage-projects {
   flex-basis: 300px;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 .homepage-articles {
@@ -136,13 +137,13 @@
 @media (max-width: 1270px) {
   .homepage-experience {
 	width: 60%;
-	margin-top: -80px;
+	margin-top: -20px;
 	white-space: pre-line;
   }
 
  .homepage-projects {
 	flex-basis: 300px;
-	margin-top: 160px;
+	margin-top: 80px;
  }
 }
 
