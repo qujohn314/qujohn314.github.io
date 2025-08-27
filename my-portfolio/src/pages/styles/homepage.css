@@ -1,162 +1,194 @@
 @import "../../data/styles.css";
 
+/* --- Page section spacing ----------------------------------------------- */
 
 .homepage-container {
-	padding-top: 100px;
+  padding-top: 100px; /* room below your fixed navbar; keep if you like the spacing */
 }
+
+/* --- Hero / first area --------------------------------------------------- */
 
 .homepage-first-area {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.homepage-first-area-left-side {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-top: -150px;
-	width: 75%;
-	max-width: 800px;
-}
-
+/* Responsive two-column hero using grid (shrinks then stacks) */
 .homepage-first-area-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: start;
+  gap: clamp(16px, 4vw, 40px);
 }
 
+/* Left side: remove negative margins; allow shrink/wrap */
+.homepage-first-area-left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;           /* was -150px */
+  width: 100%;
+  max-width: none;
+  min-width: 0;            /* important so text can shrink in grid */
+}
+
+/* Right side: center image/socials; allow shrink */
+.homepage-first-area-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Titles/subtitles keep your original width on desktop */
 .homepage-title {
-	width: 85% !important;
-	
+  width: 100% !important;
 }
 
 .homepage-subtitle {
-	width: 85% !important;
+  width: 100% !important;
 }
 
-.homepage-first-area-right-side {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
+/* --- Hero image ---------------------------------------------------------- */
 
 .homepage-image-container {
-	width: 280px;
-	height: 420px;
+  width: min(42vw, 320px); /* scales down on smaller screens, caps on desktop */
+  aspect-ratio: 3 / 4;     /* consistent shape without fixed height */
+  height: auto;
 }
 
 .homepage-image-wrapper {
-	overflow: hidden;
-	border-radius: 5%;
-	background-color: rgb(94, 33, 33);
-	margin-top: 35px
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5%;
+  background-color: rgb(94, 33, 33);
+  margin-top: 10px;
 }
 
 .homepage-image-wrapper img {
-	width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fill the frame nicely */
 }
 
-.homepage-experience {
-	width: 75%;
-	margin-top: -100px;
-	white-space: pre-line;
-}
+/* --- Socials under image ------------------------------------------------- */
 
 .homepage-socials {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	margin-top: 30px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .homepage-social-icon {
-	padding-right: 20px;
-	font-size: 25px;
-	transition: color 0.2s ease-in-out;
-	color: var(--secondary-color);
+  padding-right: 20px;
+  font-size: 25px;
+  transition: color 0.2s ease-in-out;
+  color: var(--secondary-color);
 }
 
 .homepage-social-icon:hover {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
+
+/* --- Experience block ---------------------------------------------------- */
+
+/* Experience block spacing */
+.homepage-experience {
+  width: 60%;
+  margin-top: -130px;
+  white-space: pre-line;
+}
+
+/* --- After-title rows (if used elsewhere) -------------------------------- */
 
 .homepage-after-title {
-	display: flex;
+  display: flex;
 }
 
+/* --- Projects / articles / works ---------------------------------------- */
+
+/* Projects spacing */
 .homepage-projects {
-	flex-basis: 300px;
-	padding-top: 155px;
+  flex-basis: 300px;
+  margin-top: 200px;
 }
 
 .homepage-articles {
-	flex-basis: 900px;
-	padding-top: 30px;
-	margin-left: -30px;
+  flex-basis: 900px;
+  padding-top: 30px;
+  margin-left: -30px;
 }
 
 .homepage-article {
-	padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .homepage-works {
-	flex-basis: 600px;
-	padding-top: 30px;
+  flex-basis: 600px;
+  padding-top: 30px;
 }
 
+/* --- Responsive adjustments --------------------------------------------- */
+
+@media (max-width: 1270px) {
+  .homepage-experience {
+	width: 60%;
+	margin-top: -80px;
+	white-space: pre-line;
+  }
+
+ .homepage-projects {
+	flex-basis: 300px;
+	margin-top: 160px;
+ }
+}
+
+
 @media (max-width: 1024px) {
-	.homepage-first-area {
-		flex-direction: column;
-	}
+  /* Stack hero columns */
+  .homepage-first-area-top {
+    grid-template-columns: 1fr;
+  }
 
-	.homepage-first-area-left-side {
-		display: flex;
-		flex-direction: column; /* Changed: set direction to column */
-		align-items: flex-start;
-		width: 100%;
-		order: 2;
-	}
+  /* Let text fill width on small screens */
+  .homepage-title,
+  .homepage-subtitle {
+    width: 100% !important;
+    margin-top: 10px;
+  }
 
-	.homepage-title {
-		width: 100% !important;
-		margin-top: 20px;
-		order: 2;
-	}
+  /* Image grows a bit on tablets/phones, then caps */
+  .homepage-image-container {
+    width: min(80vw, 360px);
+  }
+  
 
-	.homepage-subtitle {
-		width: 100% !important;
-		margin-top: 10px;
-		order: 3;
-	}
+  .homepage-after-title {
+    flex-direction: column;
+  }
 
-	.homepage-first-area-right-side {
-		width: 100%;
-		order: 1;
-	}
+  .homepage-projects,
+  .homepage-articles,
+  .homepage-works {
+    flex-basis: auto;
+  }
 
-	.homepage-image-container {
-		padding-top: 50px;
-		padding-bottom: 50px;
-		margin-left: 10px;
-		order: 1;
-	}
+  .homepage-projects { 
+	flex-basis: 300px; 
+	margin-top: 40px;
+  }
 
-	.homepage-after-title {
-		flex-direction: column;
-	}
+  .homepage-experience { 
+	width: 100%; /* was 75% */ 
+	margin-top: 40px;
+	white-space: pre-line; 
+  }
 
-	.homepage-projects {
-		flex-basis: auto;
-	}
-
-	.homepage-articles {
-		flex-basis: auto;
-	}
-
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
-	}
+  .homepage-works {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
 }
