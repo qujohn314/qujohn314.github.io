@@ -1,12 +1,10 @@
 import React from "react";
 
-const Logo = ({ width}) => {
-  const Title = <p>{`Quincy Johnson`}</p>;
-
+const Logo = () => {
   return (
-    <>
-      {Title}
-    </>
+    <p className="logo-text">
+      Quincy<span className="logo-break" aria-hidden="true"></span> Johnson
+    </p>
   );
 };
 

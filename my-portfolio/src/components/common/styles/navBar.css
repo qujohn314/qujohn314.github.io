@@ -9,6 +9,10 @@
 	font-family: var(--tertiary-font);
 }
 
+.logo-break {
+  display: none;
+}
+
 .navbar {
 	display: flex;
 	justify-content: center;
@@ -94,9 +98,20 @@
 
 	.nav-background {
 		width: 100%;
+		min-height: 85px;
 	}
 
 	.nav-item {
 		font-weight: bold;
+	}
+
+	.logo-break {
+    	display: block;        /* forces a line-break between the names */
+  	}
+}
+
+@media (max-width: 400px) {
+	.nav-list {
+		margin-right: 30px; 
 	}
 }
